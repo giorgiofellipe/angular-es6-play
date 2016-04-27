@@ -5,6 +5,8 @@ import uiRouter from 'angular-ui-router';
 
 import {name as Home} from '../home/home';
 
+import './app.html';
+
 class App {}
 
 const name = 'app';
@@ -14,7 +16,7 @@ export default angular.module(name, [
   uiRouter,
   Home
 ]).component(name, {
-  templateUrl: `${name}.html`,
+  templateUrl: `src/components/${name}/${name}.html`,
   controllerAs: name,
   controller: App
 })
@@ -26,18 +28,18 @@ function config($locationProvider, $urlRouterProvider) {
 
   $locationProvider.html5Mode(true);
 
-  // $urlRouterProvider.otherwise('/home');
+  $urlRouterProvider.otherwise('/home');
 }
 
 function run($rootScope, $state) {
   'ngInject';
 
   console.log('run: app');
-  $rootScope.$on('$stateChangeError',
-    (event, toState, toParams, fromState, fromParams, error) => {
-      if (error === 'AUTH_REQUIRED') {
-        $state.go('login');
-      }
-    }
-  );
+  // $rootScope.$on('$stateChangeError',
+  //   (event, toState, toParams, fromState, fromParams, error) => {
+  //     if (error === 'AUTH_REQUIRED') {
+  //       $state.go('login');
+  //     }
+  //   }
+  // );
 }
