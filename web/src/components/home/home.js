@@ -1,3 +1,4 @@
+//THIS IS AN EXAMPLE OF ROUTING A COMPONENT
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 

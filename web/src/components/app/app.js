@@ -4,6 +4,7 @@ import 'angular/angular.js';
 import uiRouter from 'angular-ui-router';
 
 import {name as Home} from '../home/home';
+import {name as MoviesList} from '../moviesList/moviesList';
 
 import './app.html';
 
@@ -14,7 +15,8 @@ const name = 'app';
 // create a module
 export default angular.module(name, [
   uiRouter,
-  Home
+  Home,
+  MoviesList
 ]).component(name, {
   templateUrl: `src/components/${name}/${name}.html`,
   controllerAs: name,
