@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <base href="/" />
+        <title>ES6 Test App!</title>
+    </head>
+    <body ng-strict-di>
+        {% for (var chunk in o.htmlWebpackPlugin.assets) { %}
+        <script src="{%=o.htmlWebpackPlugin.assets[chunk]%}"></script>
+        {% } %}
+        <home></home>
+    </body>
+</html>
