@@ -2,8 +2,6 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 
-import './home.html';
-
 class Home {
   constructor($scope) {
     'ngInject';

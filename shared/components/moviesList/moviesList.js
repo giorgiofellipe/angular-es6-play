@@ -2,8 +2,6 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 
-import './moviesList.html';
-
 class MoviesList {
   constructor($scope) {
     'ngInject';

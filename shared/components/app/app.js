@@ -6,8 +6,6 @@ import uiRouter from 'angular-ui-router';
 import {name as Home} from '../home/home';
 import {name as MoviesList} from '../moviesList/moviesList';
 
-import './app.html';
-
 class App {}
 
 const name = 'app';
